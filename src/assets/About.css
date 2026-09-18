@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+.machiavellian-container {
+  background-color: #050406;
+  /* Fondo con una niebla roja borgoña muy sutil y profunda */
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(61, 10, 18, 0.35) 0%, rgba(5, 4, 6, 1) 85%),
+    repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.01) 0, rgba(212, 175, 55, 0.01) 1px, transparent 0, transparent 50px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cinzel Decorative', serif;
+  color: #f3efe6;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.machiavellian-frame {
+  position: relative;
+  background: rgba(12, 10, 15, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 5rem 4rem;
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.95),
+              inset 0 0 40px rgba(138, 3, 3, 0.08);
+  transition: border-color 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Efecto al pasar el cursor por el marco (Todo por CSS puro) */
+.machiavellian-frame:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95),
+              0 0 30px rgba(212, 175, 55, 0.15),
+              inset 0 0 50px rgba(138, 3, 3, 0.15);
+}
+
+/* Símbolo exótico central */
+.sigil {
+  display: block;
+  font-size: 2rem;
+  color: #8a0303;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(138, 3, 3, 0.8);
+  transition: transform 0.6s ease, color 0.6s ease;
+}
+
+.machiavellian-frame:hover .sigil {
+  transform: rotate(180deg) scale(1.2);
+  color: #d4af37;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+}
+
+/* Título con gradiente dorado imperial y relieve */
+.machiavellian-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #ffffff 20%, #d4af37 60%, #5a440c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.9));
+}
+
+.machiavellian-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #a89f91;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Ornamentos barrocos en las esquinas creados con bordes CSS */
+.corner-ornament {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #d4af37;
+  border-style: solid;
+  transition: all 0.5s ease;
+}
+
+.tl {
+  top: 15px;
+  left: 15px;
+  border-width: 2px 0 0 2px;
+}
+
+.tr {
+  top: 15px;
+  right: 15px;
+  border-width: 2px 2px 0 0;
+}
+
+.bl {
+  bottom: 15px;
+  left: 15px;
+  border-width: 0 0 2px 2px;
+}
+
+.br {
+  bottom: 15px;
+  right: 15px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Expansión de los ornamentos al hacer hover */
+.machiavellian-frame:hover .corner-ornament {
+  width: 35px;
+  height: 35px;
+  border-color: #fff;
+}
